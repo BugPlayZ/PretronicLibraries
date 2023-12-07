@@ -39,9 +39,6 @@
                 <executions>
                     <execution>
                         <id>default-compile</id>
-                        <configuration>
-                            <release>1.8</release>
-                        </configuration>
                     </execution>
                     <execution>
                         <id>base-compile</id>
