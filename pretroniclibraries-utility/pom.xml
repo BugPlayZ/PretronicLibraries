@@ -39,30 +39,17 @@
                 <executions>
                     <execution>
                         <id>default-compile</id>
-                        <configuration>
-                            <jdkToolchain>
-                                <version>9</version>
-                            </jdkToolchain>
-                        </configuration>
                     </execution>
                     <execution>
                         <id>base-compile</id>
                         <goals>
                             <goal>compile</goal>
                         </goals>
-                        <configuration>
-                            <excludes>
-                                <exclude>JDK9ReflectVersioned.java</exclude>
-                            </excludes>
-                        </configuration>
                     </execution>
                 </executions>
                 <configuration>
-                    <jdkToolchain>
-                        <version>[1.8,9)</version>
-                    </jdkToolchain>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>11</source>
+                    <target>11</target>
                 </configuration>
             </plugin>
             <plugin>
