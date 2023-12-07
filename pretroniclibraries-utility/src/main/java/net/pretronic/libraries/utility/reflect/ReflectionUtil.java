@@ -20,7 +20,6 @@
 package net.pretronic.libraries.utility.reflect;
 
 import net.pretronic.libraries.utility.SystemUtil;
-import net.pretronic.libraries.utility.reflect.versioned.JDK9ReflectVersioned;
 import net.pretronic.libraries.utility.reflect.versioned.LegacyReflectVersioned;
 import net.pretronic.libraries.utility.reflect.versioned.ReflectVersioned;
 
@@ -37,13 +36,7 @@ public class ReflectionUtil {
     private final static ReflectVersioned VERSIONED;
 
     static {
-        ReflectVersioned versioned;
-        if(SystemUtil.getJavaBaseVersion() >= 9){
-            versioned = new JDK9ReflectVersioned();
-        }else{
-            versioned = new LegacyReflectVersioned();
-        }
-        VERSIONED = versioned;
+        VERSIONED = new LegacyReflectVersioned();
     }
 
     public static Collection<Field> getAllFields(Class<?> clazz) {
