@@ -40,10 +40,7 @@
                     <execution>
                         <id>default-compile</id>
                         <configuration>
-                            <jdkToolchain>
-                                <version>9</version>
-                            </jdkToolchain>
-                            <release>9</release>
+                            <release>1.8</release>
                         </configuration>
                     </execution>
                     <execution>
@@ -59,9 +56,6 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <jdkToolchain>
-                        <version>[1.8,9)</version>
-                    </jdkToolchain>
                     <source>1.8</source>
                     <target>1.8</target>
                 </configuration>
